@@ -1,0 +1,599 @@
+; Menu file for Windows gnuplot
+; Roger Hadgraft, 26-5-92
+; Russell Lang, 30 Nov 1992
+; translated by Masahito Yamaga (ma@yama-ga.com)
+
+[Menu]
+ﾌｧｲﾙ(&F)
+	開く(&O) ...
+		load '[OPEN]load[EOS]*.plt[EOS]'{ENTER}
+	保存(&S) ...
+		save '[SAVE]save[EOS]*.plt[EOS]'{ENTER}
+	ﾃﾞﾓ(&D) ...
+		load '[OPEN]load[EOS]*.dem[EOS]'{ENTER}
+	--
+	ﾃﾞｨﾚｸﾄﾘの移動(&C) ...
+		cd '[INPUT]New directory?[EOS]'{ENTER}
+	現在のﾃﾞｨﾚｸﾄﾘ(&D)
+		pwd{ENTER}
+	--
+	出力先の設定(&U) ...
+		set output "[INPUT]Output filename?[EOS]"{ENTER}
+;	ﾌﾟﾘﾝﾀへ(&P)
+;		set output "PRN"{ENTER}
+	ｳｨﾝﾄﾞｳ表示(&W)
+		 set output{ENTER}set terminal win{ENTER} 
+	現在の出力先
+		show output{ENTER}
+	出力ﾃﾞﾊﾞｲｽの設定(&T) ...
+		set terminal [INPUT]Terminal type?{ENTER}
+	出力ﾃﾞﾊﾞｲｽの表示
+		set terminal{ENTER}show terminal{ENTER}
+	--
+	[Menu]
+	行編集
+		前に実行したｺﾏﾝﾄﾞ	^P
+			{^P}
+		次に実行したｺﾏﾝﾄﾞ	^N
+			{^N}
+		--
+		一文字戻る	^B
+			{^B}
+		一文字進む	^F
+			{^F}
+		--
+		行頭へ移動	^A
+			{^A}
+		行末へ移動	^E
+			{^E}
+		--
+		ｶｰｿﾙの前の一文字を削除	^H
+			{^H}
+		ｶｰｿﾙ上の一文字削除	^D
+			{^D}
+		ｶｰｿﾙの前の一語を削除	^W
+			{^W}
+		ｶｰｿﾙ以降をすべて削除	^K
+			{^K}
+		行をすべて削除	^U
+			{^U}
+		--
+		行を再表示	^L
+			{^L}
+	[EndMenu]
+	DOS 窓を開く
+		shell{ENTER}
+	DOS のｺﾏﾝﾄﾞを実行 ...
+		![INPUT]DOS command?{ENTER}
+	--
+	終了(&X)
+		quit{ENTER}
+[EndMenu]
+
+[Menu]
+ﾌﾟﾛｯﾄ(&P)
+	ﾌﾟﾛｯﾄ (plot)
+		plot 
+	3次元ﾌﾟﾛｯﾄ (splot)
+		splot 
+	再ﾌﾟﾛｯﾄ (replot)
+		replot{ENTER}
+	ﾃﾞﾊﾞｲｽをｸﾘｱ (clear)
+		clear{ENTER}
+	--
+	範囲指定
+		[[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]] [EOS]
+	特定の変数の範囲指定
+		[[INPUT]Variable name?[EOS]=[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]] [EOS]
+	--
+	ﾃﾞｰﾀﾌｧｲﾙ名 ...
+		'[OPEN]Open[EOS]*.dat[EOS]' [EOS]
+	x,y として使う列
+		using [INPUT]X column?[EOS]:[INPUT]Y column?[EOS] [EOS]
+	x,y,ydelta として使う列
+		using [INPUT]X column?[EOS]:[INPUT]Y column?[EOS]:[INPUT]Ydelta column?[EOS] [EOS]
+	x,y,ylow,yhigh として使う列
+		using [INPUT]X column?[EOS]:[INPUT]Y column?[EOS]:[INPUT]Ylow column?[EOS]:[INPUT]Yhigh column?[EOS] [EOS]
+	--
+	[Menu]
+	ｽﾀｲﾙ
+		線 (Lines)
+			with lines
+		ﾎﾟｲﾝﾄ (Points)
+			with points
+		線とﾎﾟｲﾝﾄ (Lines and Points)
+			with linespoints
+		垂線 (Impulses)
+			with impulses
+		ｽﾃｯﾌﾟ (Steps)
+			with steps
+		ﾄﾞｯﾄ (Dots)
+			with dots
+		ｴﾗｰﾊﾞｰ (Error Bars)
+			with errorbars
+		矩形 (Boxes)
+			with boxes
+		矩形とｴﾗｰﾊﾞｰ (Box Error Bars)
+			with boxerrorbars
+	[EndMenu]
+[EndMenu]
+
+[Menu]
+表現(&E)
+	変数
+		print 
+	複素数 ...
+		{[INPUT]Real part?[EOS],[INPUT]Imaginary part?[EOS]}
+	--
+	指数演算子	**
+		**
+;	積	*
+;		*
+;	商	/
+;		/
+;	和	+
+;		+
+;	差	-
+;		-
+	--
+	ﾓｼﾞｭﾛ演算子	%
+		%
+	等しい	==
+		==
+	等しくない	!=
+		!=
+	--
+	ﾋﾞｯﾄごとの AND	&
+		&
+	ﾋﾞｯﾄごとの排他的 OR	^
+		^
+	ﾋﾞｯﾄごとの OR	|
+		|
+	--
+	論理的 AND	&&
+		&&
+	論理的 OR	||
+		||
+;	--
+;	3項演算子 1	?
+;		?
+;	3項演算子 2	:
+;		:
+[EndMenu]
+
+[Menu]
+関数(&N)
+	絶対値 (abs)
+		abs
+	偏角 (arg)
+		arg
+	虚部 (imag)
+		imag
+	実部 (real)
+		real
+	符号 (sgn)
+		sgn
+	--
+	引数より小さくない最小の整数 (ceil)
+		ceil
+	引数より大きくない最大の整数 (floor)
+		floor
+	整数 (int)
+		int
+	--
+	平方根 (sqrt)
+		sqrt
+	指数 (exp)
+		exp
+	自然対数 (log)
+		log
+	常用対数 (log10)
+		log10
+	|
+	acos
+		acos
+	asin
+		asin
+	atan
+		atan
+	--
+	cos
+		cos
+	sin
+		sin
+	tan
+		tan
+	--
+	cosh
+		cosh
+	sinh
+		sinh
+	tanh
+		tanh
+	--
+	π
+		pi
+	ｶﾞﾝﾏ関数
+		gamma
+	(x)
+		(x)
+	|
+	第j0次ﾍﾞｯｾﾙ関数 (besj0)
+		besj0
+	第j1次ﾍﾞｯｾﾙ関数 (besj1)
+		besj1
+	--
+	第y0次ﾍﾞｯｾﾙ関数 (besy0)
+		besy0
+	第y1次ﾍﾞｯｾﾙ関数 (besy1)
+		besy1
+	--
+	関数を定義 ...
+		[INPUT]Name for function?[EOS][INPUT]Variable/s, eg. (a,b) ?[EOS]=
+	定義した関数を表示
+		show functions{ENTER}
+	--
+	変数を定義 ...
+		[INPUT]Name for variable?[EOS]=[INPUT]Value, eg. 9.81 ?{ENTER}
+	定義した変数を表示
+		show variables{ENTER}
+	--
+	x ﾀﾞﾐｰ変数
+		set dummy [INPUT]Variable name?{ENTER}
+	x,y ﾀﾞﾐｰ変数
+		set dummy [INPUT]Variable names (eg. u,v)?{ENTER}
+	ﾀﾞﾐｰ変数を表示
+		show dummy{ENTER}
+[EndMenu]
+
+[Menu]
+一般(&G)
+	枠をつける
+		set border{ENTER}
+	枠をつけない
+		set noborder{ENTER}
+	枠の状態を表示
+		show border{ENTER}
+	--
+	矩形の幅を設定
+		set boxwidth [INPUT]Box Width?{ENTER}
+	矩形の幅を自動設定
+		set boxwidth{ENTER}
+	矩形の幅を表示
+		show boxwidth{ENTER}
+	--
+	線種の表示
+		test{ENTER}
+	--
+	[Menu]
+	媒介変数
+		媒介変数表示にする
+			set parametric{ENTER}
+		媒介変数表示をしない
+			set noparametric{ENTER}
+		媒介変数表示の状態を表示
+			show parametric{ENTER}
+		--
+		t の範囲
+			set trange [[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]]{ENTER}
+		u の範囲
+			set urange [[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]]{ENTER}
+		v の範囲
+			set vrange [[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]]{ENTER}
+	[EndMenu]
+	--
+	[Menu]
+	切り抜き
+	境界に近い点を削る
+		set clip points{ENTER}
+	一方の端だけ切り取る
+		set clip one{ENTER}
+	両端を切り取る
+		set clip two{ENTER}
+	切り取らない
+		set noclip{ENTER}
+	切り抜き方の状態を表示
+		show clip{ENTER}
+	[EndMenu]
+	--
+	[Menu]
+	極座標
+	極座標系に変更
+		set polar{ENTER}
+	直交座標に変更
+		set nopolar{ENTER}
+	極座標系かどうかを表示
+		show polar{ENTER}
+	動径方向の範囲指定
+		set rrange [[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]]{ENTER}
+	角度を度で指定
+		set angles degrees{ENTER}
+	角度をﾗｼﾞｱﾝで指定
+		set angles radians{ENTER}
+	角度の単位を表示
+		show angles{ENTER}
+	[EndMenu]
+	--
+	縮尺を設定
+		set size [INPUT]Xscale?[EOS],[INPUT]Yscale?{ENTER}
+	縮尺を表示
+		show size{ENTER}
+	--
+	関数のｻﾝﾌﾟﾘﾝｸﾞ数を指定
+		set sample [INPUT]Sampling rate (default=100)?{ENTER}
+	関数のｻﾝﾌﾟﾘﾝｸﾞ数を表示
+		show sample{ENTER}
+[EndMenu]
+
+[Menu]
+軸(&A)
+	ｵｰﾄｽｹｰﾙを使う
+		set autoscale [INPUT]Which axes (eg. xy)?{ENTER}
+	ｵｰﾄｽｹｰﾙを使わない
+		set noautoscale [INPUT]Which axes (eg. xy)?{ENTER}
+	ｵｰﾄｽｹｰﾙの状態を表示
+		show autoscale{ENTER}
+	--
+	ﾛｸﾞｽｹｰﾙを使う
+		set logscale [INPUT]Which axes (eg. xy)?{ENTER}
+	ﾛｸﾞｽｹｰﾙを使わない
+		set nologscale [INPUT]Which axes (eg. xy)?{ENTER}
+	ﾛｸﾞｽｹｰﾙの状態を表示
+		show logscale{ENTER}
+	--
+	[Menu]
+	目盛
+		目盛見出しの書式を指定
+			set format [INPUT]Axes?[EOS] "[INPUT]Format string?[EOS]"{ENTER}
+		目盛見出しの書式を表示
+			show format{ENTER}
+		--
+		目盛を内側に (ﾃﾞﾌｫﾙﾄ)
+			set tics in{ENTER}
+		目盛を外側に
+			set tics out{ENTER}
+		目盛の設定を表示
+			show tics{ENTER}
+		--
+		z軸の高さの指定
+			set ticslevel [INPUT]Level (default=0.5)?{ENTER}
+		--
+		目盛の間隔の指定
+			set [INPUT]Axis: x, y or z ?[EOS]tics [INPUT]Start, Increment, End (eg. 0,0.5,10) ?{ENTER}
+		--
+		目盛の設定開始
+			set [INPUT]Axis: x, y or z ?[EOS]tics ("[INPUT]Label text?[EOS]" [INPUT]Position?[EOS]
+		目盛のﾗﾍﾞﾙと位置の指定
+			,"[INPUT]Label text?[EOS]" [INPUT]Position?[EOS]
+		目盛の設定終了
+			){ENTER}
+	[EndMenu]
+	--
+	X の範囲
+		set xrange [[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]]{ENTER}
+	Y の範囲
+		set yrange [[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]]{ENTER}
+	Z の範囲
+		set zrange [[INPUT]Lower bound?[EOS]:[INPUT]Upper bound?[EOS]]{ENTER}
+	--
+	X 軸のﾗﾍﾞﾙ
+		set xlabel "[INPUT]Label text?[EOS]" [INPUT]X offset, Y offset (eg. 2,3) ?{ENTER}
+	Y 軸のﾗﾍﾞﾙ
+		set ylabel "[INPUT]Label text?[EOS]" [INPUT]X offset, Y offset (eg. 2,3) ?{ENTER}
+	Z 軸のﾗﾍﾞﾙ
+		set zlabel "[INPUT]Label text?[EOS]" [INPUT]X offset, Y offset (eg. 2,3) ?{ENTER}
+	軸のﾗﾍﾞﾙを表示
+		show xlabel{ENTER}show ylabel{ENTER}show zlabel{ENTER}
+	--
+	X 軸をひかない
+		set noxzeroaxis{ENTER}
+	Y 軸をひかない
+		set noyzeroaxis{ENTER}
+	X,Y 両軸をひく
+		set zeroaxis{ENTER}
+	軸の状態を表示
+		show zeroaxis{ENTER}
+[EndMenu]
+
+[Menu]
+ﾁｬｰﾄ(&C)
+	ｸﾞﾘｯﾄﾞを表示する
+		set grid{ENTER}
+	ｸﾞﾘｯﾄﾞを表示しない
+		set nogrid{ENTER}
+	ｸﾞﾘｯﾄﾞの状態を表示
+		show grid{ENTER}
+	--
+	矢印を追加
+		set arrow [INPUT]Tag (1-99)?[EOS] from [INPUT]From coordinate?[EOS] to [INPUT]To coordinate?{ENTER}
+	矢印を削除
+		set noarrow [INPUT]Tag (1-99)?{ENTER}
+	矢印の状態を表示
+		show arrow{ENTER}
+	--
+	ﾗﾍﾞﾙを追加
+		set label [INPUT]Tag?[EOS] "[INPUT]Label?[EOS]" at [INPUT]Coordinate?[EOS] [INPUT]Justification (l,c,r)?{ENTER}
+	ﾗﾍﾞﾙを削除
+		set nolabel [INPUT]Tag?{ENTER}
+	ﾗﾍﾞﾙの状態を表示
+		show label{ENTER}
+	--
+	ﾀｲﾄﾙを設定
+		set title "[INPUT]Title text?[EOS]" [INPUT]X position, Y position (eg. 2,4)?{ENTER}
+	ﾀｲﾄﾙを表示
+		show title{ENTER}
+	|
+	凡例の位置を設定
+		set key [INPUT]Key position?{ENTER}
+	凡例の位置をﾃﾞﾌｫﾙﾄに
+		set key{ENTER}
+	凡例を表示しない
+		set nokey{ENTER}
+	凡例の位置を表示
+		show key{ENTER}
+	--
+	ｵﾌｾｯﾄを設定
+		set offsets [INPUT]Offsets left,right,top,bottom ?{ENTER}
+	ｵﾌｾｯﾄを表示
+		show offsets{ENTER}
+	--
+	時刻の表示位置を設定
+		set time [INPUT]Location (eg. 1,1)?{ENTER}
+	時刻を表示しない
+		set notime{ENTER}
+	時刻の表示位置を表示
+		show time{ENTER}
+[EndMenu]
+
+[Menu]
+ｽﾀｲﾙ(&S)
+	[Menu]
+	ﾃﾞｰﾀの表示ｽﾀｲﾙ
+	線 (Lines)
+		set data style lines{ENTER}
+	ﾎﾟｲﾝﾄ (Points)
+		set data style points{ENTER}
+	線とﾎﾟｲﾝﾄ (Lines + Points)
+		set data style linespoints{ENTER}
+	ﾄﾞｯﾄ (Dots)
+		set data style dots{ENTER}
+	垂線 (Impulses)
+		set data style impulses{ENTER}
+	--
+	ｴﾗｰﾊﾞｰ (Error Bars)
+		set data style errorbars{ENTER}
+	矩形 (Boxes)
+		set data style boxes{ENTER}
+	矩形とｴﾗｰﾊﾞｰ (Box Error Bars)
+		set data style boxerrorbars{ENTER}
+	[EndMenu]
+	ﾃﾞｰﾀのｽﾀｲﾙを表示
+		show data style{ENTER}
+	--
+	[Menu]
+	関数の表示ｽﾀｲﾙ
+	線 (Lines)
+		set function style lines{ENTER}
+	ﾎﾟｲﾝﾄ (Points)
+		set function style points{ENTER}
+	線とﾎﾟｲﾝﾄ (Lines + Points)
+		set function style linespoints{ENTER}
+	ﾄﾞｯﾄ (Dots)
+		set function style dots{ENTER}
+	垂線 (Impulses)
+		set function style impulses{ENTER}
+	--
+	ｴﾗｰﾊﾞｰ (Error Bars)
+		set function style errorbars{ENTER}
+	矩形 (Boxes)
+		set function style boxes{ENTER}
+	矩形とｴﾗｰﾊﾞｰ (Box Error Bars)
+		set function style boxerrorbars{ENTER}
+	[EndMenu]
+	関数のｽﾀｲﾙを表示
+		show function style{ENTER}
+[EndMenu]
+
+[Menu]
+&3次元
+	[Menu]
+	等高線
+		直線で描画
+			set cntrparam linear{ENTER}
+		曲線で描画
+			set cntrparam cubicspline{ENTER}
+		B-spline 補間で描画
+			set cntrparam bspline{ENTER}
+		等高線の数
+			set cntrparam levels [INPUT]How many contours?{ENTER}
+		補間する点の数
+			set cntrparam points [INPUT]How many points for the contours?{ENTER}
+		B-spline 補間の次数
+			set cntrparam order [INPUT]Order of B-splines (2-10)?{ENTER}
+		--
+		床に等高線を表示する
+			set contour base{ENTER}
+		表面に等高線を表示する
+			set contour surface{ENTER}
+		床と表面の両方に等高線を表示
+			set contour both{ENTER}
+		等高線を表示しない
+			set nocontour{ENTER}
+		等高線の状態を表示
+			show contour{ENTER}
+		--
+		面描画に使う線の数を指定
+			set isosamples [INPUT]Number of isosamples?{ENTER}
+		面描画に使う線の数を表示
+			show isosamples{ENTER}
+	[EndMenu]
+	--
+	直交座標系
+		set mapping cartesian{ENTER}
+	球座標系
+		set mapping spherical{ENTER}
+	円筒座標系
+		set mapping cylindrical{ENTER}
+	写像の設定を表示
+		show mapping{ENTER}
+	--
+	陰線処理をする
+		set hidden3d{ENTER}
+	陰線処理をしない
+		set nohidden3d{ENTER}
+	陰線処理の状態を表示
+		show hidden3d{ENTER}
+	--
+	表面を網で表示する
+		set surface{ENTER}
+	表面を網で表示しない
+		set nosurface{ENTER}
+	表面の表示状態を表示
+		show surface{ENTER}
+	--
+	視角を設定
+		set view [INPUT]X rotation (degrees)?[EOS],[INPUT]Z rotation?[EOS],[INPUT]Scale?[EOS],[INPUT]Z scale?{ENTER}
+	視角を表示
+		show view{ENTER}
+[EndMenu]
+
+[Menu]
+ﾍﾙﾌﾟ(&H)
+	目次(&I)
+		help{ENTER}
+	ｲﾝﾄﾛﾀﾞｸｼｮﾝ
+		help introduction{ENTER}
+	ﾄﾋﾟｯｸ(&T)
+		help [INPUT]Help Topic?{ENTER}
+	ｳｨﾝﾄﾞｳｽﾞ(&W)
+		help windows{ENTER}
+[EndMenu]
+
+; now some buttons
+; DON'T put a shortcut key (&) on any of these because
+; it doesn't work with Windows 3.1 and it HANGS Windows 3.0.
+[Button]
+	再表示
+		replot{ENTER}
+[Button]
+	開く
+		load '[OPEN]load[EOS]*.plt[EOS]'{ENTER}
+[Button]
+	保存
+		save '[SAVE]save[EOS]*.plt[EOS]'{ENTER}
+[Button]
+	移動
+		cd '[INPUT]New directory?[EOS]'{ENTER}
+;[Button]
+;	ﾌﾟﾘﾝﾄ
+;		set terminal [INPUT]Terminal type?{ENTER}set output "PRN"{ENTER}replot{ENTER}set terminal win{ENTER}set output{ENTER}
+[Button]
+	ﾀﾞﾝﾌﾟ
+		screendump{ENTER}
+[Button]
+	前
+		{^P}
+[Button]
+	次
+		{^N}
+

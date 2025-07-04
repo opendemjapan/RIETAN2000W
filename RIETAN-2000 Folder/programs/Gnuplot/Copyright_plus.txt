@@ -1,0 +1,44 @@
+
+              Copyright (C) 1993 - 2001   Masahito Yamaga
+
+Permission to use, copy, and distribute this package and its documentation
+for any purpose is granted, provided that this permission notice is included
+in supporting documentation.
+
+Permission to modify this package is also granted, but please send an e-mail
+to Yamaga (ma@yama-ga.com) in case of distributing the modified code.
+
+This package provides NO WARRANTY. You can use this at your own risks.
+
+Copyrights on this package belong to Masahito Yamaga, but GNUPLOT's to Mr.
+Thomas Williams and Mr. Colin Kelley (See "Copyright" in the original GNUPLOT
+source package).
+
+Distribution of GNUPLOT that has been applied this patch to (especially
+binaries) has to be very carefully done. See "Copyright" in the original
+GNUPLOT source package.
+
+                                  2001/01/11 Masahito Yamaga (ma@yama-ga.com)
+
+The followings are written in Japanese (SJIS).
+
+
+              Copyright (C) 1993 - 2001   Masahito Yamaga
+
+このパッチパッケージおよびそのドキュメントの使用, 複製, 再配布は目的のいかん
+によらず自由に行なって構いません. ただし, 必ずこの文書を添付してください.
+
+このパッケージの変更も自由に行なって構いませんが, 変更したものを配布する
+場合は山賀(ma@yama-ga.com)まで電子メールでご連絡下さい.
+
+このパッケージは完全に無保証です. 使用にあたってはご自分の責任でお願いします.
+
+このパッケージの著作権は山賀正人(Masahito Yamaga)にありますが, オリジナルの
+gnuplot の著作権は Thomas Williams 氏と Colin Kelley 氏にあります.
+(オリジナルの gnuplot のソースパッケージに添付の Copyright を参照)
+
+このパッチをあてた状態での gnuplot (特にバイナリ) の配布は慎重に行なって
+ください. 詳しいことはオリジナルの gnuplot ソースパッケージに添付されている
+Copyright をご覧下さい.
+
+                        2001/01/11 山賀 正人/Masahito Yamaga (ma@yama-ga.com)

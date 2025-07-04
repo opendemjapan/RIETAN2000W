@@ -1,0 +1,35 @@
+msmin|microsoft-mincho|MicroSoft mincho:\
+	:ft=freetype:\
+	:ff=c\072/windows/fonts/msmincho.ttc:
+msgoth|microsoft-gothic|Microsoft gothic:\
+	:ft=freetype:\
+	:ff=c\072/windows/fonts/msgothic.ttc:
+hggoth|HG Gothic E-PRO:\
+	:ft=freetype:\
+	:ff=c\072/windows/fonts/hgrgep.ttf:
+hgmgoth|HG MaruGothic M-PRO:\
+	:ft=freetype:\
+	:ff=c\072/windows/fonts/hgrsmp.ttf:
+hgkaisho|HG SeiKaisho-PRO:\
+	:ft=freetype:\
+	:ff=c\072/windows/fonts/hgrskp.ttf:
+dffgoth|DF Tokubuto Gothic:\
+	:ft=freetype:\
+	:ff=c\072/windows/fonts/dfgoteb.ttc:
+
+dfpop|DF POP:\
+	:ft=freetype:\
+	:ff=c\072/windows/fonts/dfpop.ttc:
+# aliases
+min:\
+	:fc=msmin:
+goth:\
+	:fc=msgoth:
+fgoth:\
+	:fc=dffgoth:
+mgoth:\
+	:fc=hgmgoth:
+kaisho:\
+	:fc=hgkaisho:
+pop:\
+	:fc=dfpop:

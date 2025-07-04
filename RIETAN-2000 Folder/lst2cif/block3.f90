@@ -1,0 +1,92 @@
+      SUBROUTINE WRITE_BLOCK3(OUT)
+C
+      INTEGER OUT
+C
+C--------------------------------------------------------------------
+C     TITLE,AUTHOR LIST AND TEXT
+C--------------------------------------------------------------------
+      WRITE(OUT,900)
+      WRITE(OUT,902)
+      WRITE(OUT,900)
+      WRITE(OUT,300)
+      WRITE(OUT,900)
+      WRITE(OUT,301)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,302)
+      WRITE(OUT,900)
+      WRITE(OUT,903)
+      WRITE(OUT,303)
+      WRITE(OUT,304)
+      WRITE(OUT,305)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,900)
+      WRITE(OUT,902)
+      WRITE(OUT,900)
+      WRITE(OUT,306)
+      WRITE(OUT,900)
+      WRITE(OUT,307)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,308)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,309)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,310)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,311)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,312)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,313)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+      WRITE(OUT,314)
+      WRITE(OUT,901)
+      WRITE(OUT,901)
+      WRITE(OUT,900)
+C--------------------------------------------------------------------
+C
+C--------------------------------------------------------------------
+C     FORMATS FOR TITLE AND AUTHOR LIST
+C--------------------------------------------------------------------
+ 300  FORMAT('# TITLE AND AUTHOR LIST') 
+ 301  FORMAT('_publ_section_title') 
+ 302  FORMAT('# The loop structure below should contain the names and',
+     &' addresses of all',/'# authors, in the required order of',
+     &' publication. Repeat as necessary.')
+ 303  FORMAT(3X,'_publ_author_name') 
+ 304  FORMAT(3X,'_publ_author_address') 
+ 305  FORMAT(3X,"'",'?',"'")
+ 306  FORMAT('# TEXT') 
+ 307  FORMAT('_publ_section_synopsis') 
+ 308  FORMAT('_publ_section_abstract') 
+ 309  FORMAT('_publ_section_comment') 
+ 310  FORMAT('_publ_section_exptl_prep') 
+ 311  FORMAT('_publ_section_exptl_refinement') 
+ 312  FORMAT('_publ_section_references') 
+ 313  FORMAT('_publ_section_figure_captions') 
+ 314  FORMAT('_publ_section_acknowledgements') 
+C--------------------------------------------------------------------
+C
+ 900  FORMAT(' ')
+ 901  FORMAT(';')
+ 902  FORMAT('#',70('='))
+ 903  FORMAT('loop_')
+C
+      END
